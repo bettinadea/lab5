@@ -12,6 +12,14 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+$(".friend-name").click(function(e){
+	e.preventDefault();
+	var containingFriend = $(this).closest(".friend"); 
+    var name = $(containingFriend).find(".friend-name");
+    $(this).text(anagrammedName(name.text()));	
+
+})
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
